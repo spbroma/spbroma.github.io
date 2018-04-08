@@ -166,7 +166,7 @@ function init () {
 	    	}
 	    	else{
 	    		if((sourceCoordsArrIndex % 100) == 0){
-	    			mydelay(1300); //1200 = ~16s
+	    			// mydelay(1300); //1200 = ~16s
 	    		}
 	    		else{
 		    		delayVal = Math.round(Math.random()*400 + 200);
@@ -223,8 +223,8 @@ function init () {
  		
  		sourceCoordsArr = [];
 
- 		step = 200;
-        R = 5000;
+ 		step = 1000;
+        R = 4000;
  		// N = 9;
 
  		// step = R*2/((N-1)*2);
