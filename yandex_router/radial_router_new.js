@@ -159,7 +159,8 @@ function init () {
 	    	proc = Math.round(metricArr.length / sourceCoordsArrLength * 100);
 	    	console.log('' + getCurrentTime() + '\t' + metricArr.length+' ' + metric);
 	    	procStr = '';
-	    	procStr += proc + '% ' + metric;
+	    	procStr += proc + '% ';
+	    	// procStr += proc + '% ' + metric;
 	    	dispStr('result', procStr);
 	    	if(metricArr.length == sourceCoordsArrLength){
 	    		plotHeatMap();

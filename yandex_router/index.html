@@ -13,7 +13,12 @@
 	<style type="text/css"> 
 		p.rslt { 
 			font-family: Arial; /* Гарнитура шрифта */ 
-			font-size: 100%; /* Размер текста */ 
+			font-size: 200%; /* Размер текста */ 
+			font-weight: lighter; /* Светлое начертание */ 
+		}	
+		p.proc { 
+			font-family: Arial; /* Гарнитура шрифта */ 
+			font-size: 150%; /* Размер текста */ 
 			font-weight: lighter; /* Светлое начертание */ 
 		}	
 	</style>
@@ -23,10 +28,10 @@
 	<center>
 		<!-- <h3>Оценка транспортной доступности</h3>  -->
 		<div id="map" style="width: 100%; height: 80%"></div>
-		<p id = "points" class="rslt">  <p>
-		<p id = "result" class="rslt">  <p>
-		<button id='button' onclick='buttonClick();' type="radio" checked="checked">Жми</button>
-		<p id = "flag" class="rslt">0<p>
+		<p id = "points" class="rslt">Выберите на место на карте<p>
+		<p id = "result" class="proc">  <p>
+		 <!-- <button id='button' onclick='buttonClick();' type="radio" checked="checked">Жми</button> -->
+		<!-- <p id = "flag" class="rslt">0<p> -->
 		<noscript>Sorry, your browser does not support javascript!</noscript>
 	</center>
 </body>
