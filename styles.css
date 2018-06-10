@@ -5,8 +5,8 @@
 	}
 
 	.basic{
-		margin-top: 5%;
-		height: 100%;
+		margin-top: 1%;
+		/*height: 100%;*/
 		font: 12pt sans-serif;  
     	display: flex;
 		/*background: #ff0000;*/
@@ -28,6 +28,15 @@
         font-size: 70%;
         color: rgba(0, 0, 1, 0.5);
         font-style: : italic;
+    }
+
+	.about {
+		flex: 0 0 500px;
+        /*font-size: 70%;*/
+        color: rgba(0, 0, 0, 1);
+        font-style: : italic;
+        
+		/*background: #ffFF00;*/
     }
 
 	.title{
