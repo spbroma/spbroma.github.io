@@ -6,7 +6,6 @@
 
 	.basic{
 		margin-top: 1%;
-		/*height: 100%;*/
 		font: 12pt sans-serif;  
     	display: flex;
 		/*background: #ff0000;*/
@@ -35,7 +34,7 @@
         /*font-size: 70%;*/
         color: rgba(0, 0, 0, 1);
         font-style: : italic;
-        
+
 		/*background: #ffFF00;*/
     }
 
