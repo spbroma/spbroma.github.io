@@ -16,11 +16,19 @@
 		/*background: #ffFF00;*/
 	}
 
-	.fill{
+	.fill_l{
     	/*float: left;*/
-    	width: 30%;
-		flex: 10%
-		/*background: #00ff00;*/		
+    	/*width: 10%;*/
+		flex: 5%
+		/*background: #00ff00;		*/
+	}
+
+	.fill_r{
+    	/*float: left;*/
+    	/*width: 60%;*/
+		flex: 20%;
+		margin-right: 20%;
+		/*background: #00ff00;		*/
 	}
 
 	.small-text {
