@@ -1,0 +1,48 @@
+<head>
+    <title>COVID dashboard</title>
+    <style>
+
+        .background {
+            /* background: #f00; */
+            width: 100%;
+            height: 100vh;
+
+         }
+
+         .row {
+             /* background: #ff0; */
+
+  display: flex;
+            /* width: 100%;
+            height: 50%; */
+         }
+         .col {
+             /* background: #0ff; */
+            width: 50%;
+            height: 50vh;
+         }
+    </style>
+
+    <meta charset="utf-8">
+</head>
+
+<body bgcolor="white", min-height: 100%>
+    <div class="background">
+        <div class="row">
+            <div class="col" style="">
+                <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="../covid.html" height="100%" width="100%"></iframe>
+            </div>
+            <div class="col" style="">
+                <iframe id="igraph" scrolling="yes" style="border:none;" seamless="seamless" src="https://coronavirus.mash.ru/" height="100%" width="100%"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <iframe src="https://cashin.ru/virus/russia/" style="width: 100%; height: 100%; border: 0px none;"></iframe>
+            </div>
+            <div class="col">
+                <iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=BLR+RUS+UKR" style="width: 100%; height: 100%; border: 0px none;"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
