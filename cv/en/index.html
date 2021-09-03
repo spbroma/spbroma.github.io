@@ -1,0 +1,647 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Roman Vlasov</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="eb011d66-c2f3-40e1-8f02-61ce52889181" class="page sans"><header><img class="page-cover-image" src="Roman%20Vlasov%20c0ce509f28fd4348957e788c5907c26c/IMG_8127.jpg" style="object-position:center 70.65%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://sun1-91.userapi.com/s/v1/if1/FUjIc204PV1mtFtkQcO07Md9iSLkv4u-tOaw0uhcMe5cXJkHXY0-peW70FkTsnL0LL1-4e4w.jpg?size=200x200&amp;quality=96&amp;crop=0,11,599,599&amp;ava=1"/></div><h1 class="page-title">Roman Vlasov</h1></header><div class="page-body"><p id="68b445ed-2fe4-400a-bb44-95b42a8f6b7f" class="">ML Research engineer</p><p id="efc9b197-6d9f-4b4c-9e87-524d56a037b2" class="">22.09.1991, Saint-Petersburg → Moscow</p><p id="b470a6d7-b425-4314-a81b-13186202c3a6" class="">Microelectronics and sensorics → Software, FPGA → ML, optimization</p><h1 id="53edc92a-afe6-44d9-9385-9fb1339d9f99" class="">☎️ Contact information</h1><p id="dd79c1f4-9e4c-49e3-b167-679bd9cacfa1" class=""><code>phone    </code> <a href="tel:+79062680079">+7 906 268 00 79</a>
+<code>e-mail   </code> <a href="mailto:spbroma@gmail.com">spbroma@gmail.com</a>
+<code>telegram </code> <a href="http://t.me/spbroma">@spbroma</a></p><p id="572da4d4-1811-4e9f-9ca5-d046abf7669b" class=""><code>linkedin </code> <a href="http://linkedin.com/in/roman-vlasov-69b32b69">http://linkedin.com/in/roman-vlasov-69b32b69</a>
+<code>github   </code> <a href="https://github.com/spbroma">https://github.com/spbroma</a>
+<code>gitlab   </code> <a href="https://gitlab.com/spbroma">https://gitlab.com/spbroma</a></p><h1 id="4b816f50-32c5-426e-a657-5eb85ef42439" class="">💡 Interests</h1><p id="f31df8eb-4e56-4156-8bd2-0911c15077f3" class="">Research of machine learning algorithms and optimization methods, solving applied problems with them.</p><p id="438a3a4c-dd43-40af-aa83-f5293d6dd8df" class=""><em>Directions, which I&#x27;m interested in for the future: image and video processing and generation, AR/VR/XR, ML for 3D, application of geometrical methods and topology</em></p><h1 id="0de3bb25-b77b-4d9f-a821-1766478d9652" class="">👨‍🏫 Speeches and Publications</h1><p id="e10e29f3-6c08-4b66-89e1-da02015787d4" class=""><strong>Presentation:</strong> ODS.AI DataFest: ML Perf, Machine Learning Hardware Benchmark (<a href="https://www.youtube.com/watch?v=-7dJn8DIF3Y">2020</a>)</p><p id="1f07ec7f-890f-4c8a-9ee0-b50a46ed65a6" class=""><strong>Workshop</strong>: &quot;Application of  global and gradient-based neural architecture search approaches for nonlinear digital signal processing&quot; at summer school &quot;<a href="https://sochisirius.ru/obuchenie/graduates/smena673/3258">Modern methods of information theory, optimization and control</a>&quot; (<a href="https://lh3.googleusercontent.com/ss9KrkMW7zqB4FjpcYDCX_xmXhQ4Vn1IH3ikxa07nCDGGiOGiqMgg-lpEqiCrWI6RylRA-CJ7AMln95RaaWkKDVJG-quaFSyx7fetrqgem6k_C8E045YTK35wmPfLTUfiVO9TpJxhfDAUDzJPjKt9ir7GvxtAa-FJEPdgRc8fsTUgU6kwIVdnm6_dT262MPdycFs_MUFoMY7GrDkW8lrxE5NAp88u_OHqipFAvn60QAhHlOgNGCu0ThDKw1dyc7HvEKyb34oPzPC4sEPwnvXvhbUwRe0nBb3Pvt3OWCcZOw9tl9-Jsv8SZlzHP9xBKVq0_gGWYwNoUu0YWFHNR5DN8pE1mB1tBid5egkuwy0ACo20Yp60VsMG5tDCcyhjN77N2yRExfWTBJf7TvFU11DVVaINYaFW-WxikpCTrIiH-FclfBNqCzpRQdSKqodi59w-HaGEquRwZ2wKulwc312rfxSnI6bG03keNszbRjlq6kt02VXyQFbU7Qd1K340qejtPChV2_zc6wYeOchTwFYhVuJz8YwLZdVtINAkiWKMaywvW7THczSwcW5HtBWpNme2Mo3JzeQibtLp6RpIGR-5wwyMBh5CSquSNwJRJhwZIh4bWbnoeco-QfSJtwCqXv7fxQghKYuqqM19eDzT0Nj763NTfPg7hgURp9tqhPY6oNGFHuvIRA6czs0I2js4Vk8wggHDWN1Av1Jj_8ugRMckb9-FA=w1249-h937-no?authuser=0">2020</a>, <a href="https://sochisirius.ru/obuchenie/graduates/smena928/4475">2021</a>)</p><p id="12670049-db1e-4f7d-a6f1-a60f49943610" class=""><strong>Paper</strong>: Non-convex optimization in digital pre-distortion of the signal (<a href="https://arxiv.org/abs/2103.10552">arXiv</a>)</p><h1 id="fe20497c-6927-4079-84d7-91bf7a723f2e" class="">💻 Working experience</h1><h2 id="3b841330-79da-406c-baed-01337b21e7fd" class="block-color-blue_background"><a href="https://career.huawei.ru/rri/">Huawei Russian Research Institute</a>, Moscow</h2><p id="d179615f-abbb-47a8-b4d1-6b0e43adc394" class=""><strong>Senior Research Engineer</strong>
+Apr 2017 — ongoing</p><h3 id="ec0e946f-39ef-4bf4-b8b5-3af1a840b9aa" class="">✨ General task</h3><p id="edf24541-c577-4f71-884a-55a5d5fab7a4" class=""><strong>Adaptive models</strong> in digital signal processing (<strong>DSP</strong>) domain for <strong>system recognition</strong> task of radio-frequency signal. </p><h3 id="1ece1044-e8a4-42ff-922e-9e57be6f1910" class="">🔬 Research</h3><ul id="23fa717e-9c96-4204-872f-8e731262080a" class="bulleted-list"><li>Optimization algorithms for complex-valued adaptive nonlinear dynamic system: gradient, second-order, non-gradient methods</li></ul><ul id="06b5463b-ef84-4555-a827-3eade81ac416" class="bulleted-list"><li>Online structure optimization</li></ul><ul id="fd316ecd-086d-4145-b6c6-fad6f10d65af" class="bulleted-list"><li>Evolutionary model architecture search, DARTS and other approaches</li></ul><h3 id="30cb99e3-60e4-4d30-ab8f-85e825a05108" class="">🛠 Development </h3><ul id="45dd1d90-fe53-49d1-9733-fe104320a5eb" class="bulleted-list"><li>Custom framework for automatic differentiation with complex-valued signal and parameters (support and improvement, implementation of new adaptation methods)</li></ul><ul id="8d68ac70-01eb-4dab-a35a-3f329dce0cf4" class="bulleted-list"><li>Flexible framework for multiple simulation launching with automatic report generation, comparing and analyzing results</li></ul><ul id="44ecadb0-b287-4e64-8a01-572cf3c4d852" class="bulleted-list"><li>Complex-valued models for TensorFlow and PyTorch, custom C++ TF-blocks</li></ul><ul id="249f4866-e669-4615-8b6a-d8a47976caa4" class="bulleted-list"><li>Flexible bitwise fixpoint C++ testbench for FPGA implementation of adaptive models</li></ul><h3 id="a251586e-3124-4aed-8ccb-26a2412c9a80" class="">🧰 Languages and tools</h3><ul id="98bcf463-5d9c-4052-87e6-a2fea071667e" class="bulleted-list"><li>Python, Matlab, PyTorch, TensorFlow, C/C++, Verilog, SystemVerilog</li></ul><ul id="d4815838-988d-45fb-a188-760540082676" class="bulleted-list"><li>Git, SVN, Ubuntu, Xilinx Vivado</li></ul><h3 id="65fb271a-e9a6-4642-b93f-65ee8db937c9" class="">📄 Keywords  </h3><p id="26c23e00-0fa0-4091-a341-bb26cdde1499" class=""><code>machine learning</code>, <code>non-convex optimization</code> , <code>adaptive models</code>, <code>GitLab</code>, <code>AutoML</code>, <code>Neural architecture search</code>, <code>NAS</code>, <code>DARTS</code>, <code>DSP</code>, <code>Matlab</code></p><h2 id="77ec3c01-cf89-4cad-a13c-9002ff59fd44" class="block-color-blue_background"><a href="https://www.stc-spb.ru/">Special Technological Center</a>, Saint-Petersburg</h2><p id="223b18f7-440d-413a-8317-1ff36a1e8054" class=""><strong>Software Engineer</strong>
+Jul 2014 — Jan 2017</p><h3 id="fd4e20e3-712d-442b-a097-3b377be90e8c" class="">✨ General task</h3><p id="6d39b899-0a64-4633-b0a5-fdd126133732" class="">Development solutions for information security tasks.</p><h3 id="4c69b1d4-6b7f-4360-b19d-e73183945410" class="">🔬 Research</h3><ul id="fba963c7-6586-464d-b8a4-bdd573cea030" class="bulleted-list"><li>Distributed high performance computing (FPGA, GPU)</li></ul><ul id="b020f39f-575f-460a-8e25-9a7c9c9aee84" class="bulleted-list"><li>Cryptography</li></ul><ul id="a7848718-e83e-432b-8e0d-984b759ee71c" class="bulleted-list"><li>Reverse engineering of ASIC</li></ul><h3 id="d7e4d627-63c9-4ff9-9c80-07cc685a599e" class="">🛠 Development </h3><ul id="2d1ee35b-199d-4a31-bb3f-416fe2f91ddf" class="bulleted-list"><li>Timing and resource optimization of RTL</li></ul><ul id="284600a4-9af8-4670-ade7-1c12ed3f228d" class="bulleted-list"><li>Participation in development of devices for HPC, systems for receiving and processing of RF-signal</li></ul><ul id="487b5270-eb1a-4fa5-b748-e7e6a206f7a1" class="bulleted-list"><li>Software development for Windows (Qt, Visual Studio)</li></ul><ul id="e3fdd65c-1c7b-4697-87d9-45261f5e8a11" class="bulleted-list"><li>Custom FPGA IP-cores for I2C, SPI, UDP</li></ul><h3 id="48ce63ca-ed8b-404b-91d2-50feda6f394c" class="">🧰 Languages and tools</h3><ul id="f807bac0-8ba4-4867-812f-4709127bdc95" class="bulleted-list"><li>C/C++, Verilog, Qt</li></ul><ul id="494a7364-c9ef-4f31-82a8-d99b0dd147b5" class="bulleted-list"><li>Xilinx Vivado, MS Visual Studio, Wireshark</li></ul><h3 id="13bb00df-0555-4246-beb1-209d7d4c51a9" class="">📄 Keywords  </h3><p id="c32fbabe-3b15-44e3-89a3-1e8c8196f150" class=""><code>DSP</code>,  <code>FPGA</code>, <code>software</code>, <code>hardware</code>, <code>wireless</code>, <code>cryptography</code></p><h2 id="c563f991-4078-4921-9a61-5b981770f112" class="block-color-blue_background"><a href="https://old.etu.ru/science/nik1133.htm">Center of Microtechnologies and Diagnostics</a>, LETI, SPb</h2><p id="1ca5b685-0670-42f0-bb6b-cfa1db4d1145" class=""><strong>Engineer</strong>
+Feb 2013 — Jun 2014</p><h3 id="64b67148-6292-49e8-9410-22ec0e0d3861" class="">✨ General task</h3><p id="75355683-4dc7-4de3-b8bc-fcea7d8383b4" class="">Work on master thesis: research in algorithms of signal processing for optical and acoustic sensors, implementation it in hardware and software. Devise and conducting experiments, other support tasks</p><h3 id="14ea1e37-1e0e-4759-a578-3d26604ef29e" class="">🔬 Research</h3><ul id="8f57f9fe-8230-486c-94f5-cd2380dae5ab" class="bulleted-list"><li>Methods of stress measurement for thin-film membranes for MEMS</li></ul><ul id="05239f67-ff01-4754-8b78-2a8dd1768235" class="bulleted-list"><li>Fiber-optics and acoustic sensors</li></ul><ul id="1b8d120b-298e-4116-8b5b-6df78729fc7c" class="bulleted-list"><li>MEMS sensors</li></ul><ul id="98b5e8cb-88cb-49bb-a770-fe0cd895604d" class="bulleted-list"><li>Increasing dynamic range of interferometric fiber-optic sensor</li></ul><h3 id="19149c93-b7f2-467b-8e8e-7cc8f38817d9" class="">🛠 Development </h3><ul id="2ff1d78f-36f8-4260-86f9-85dee288008e" class="bulleted-list"><li>Windows software (Qt, matlab, LabVIEW)</li></ul><ul id="247882cd-eb66-400e-ac55-c6a353b8ef63" class="bulleted-list"><li>Microcontroller firmware</li></ul><ul id="166a6d4e-590d-4e7c-91b3-058afadb1e16" class="bulleted-list"><li>RTL design</li></ul><ul id="c5c77272-399d-4dbe-aa5d-54c478849022" class="bulleted-list"><li>Designing of the devices body</li></ul><h3 id="fd637ae2-6291-48af-aaa4-0939da77c231" class="">🧰 Languages and tools</h3><ul id="75cdbcd4-ab35-4059-a57d-a19affa6669c" class="bulleted-list"><li>C/C++, Verilog, Qt, LabVIEW, Matlab, LaTeX</li></ul><ul id="74b947f7-22a2-4db4-9548-3b54fc8e24bb" class="bulleted-list"><li>Qt Creator, Xilinx ISE, SolidWorks, IAR </li></ul><h3 id="2206647e-f069-492a-93b5-bad5583bf0b4" class="">📄 Keywords  </h3><p id="c11bfac3-cac1-4946-8fe4-c2ebc9a92c8c" class=""><code>sensors</code>, <code>signal processing</code>, <code>optics</code>, <code>hardware</code>, <code>software</code>, <code>MCU</code>, <code>FGPA</code>, <code>measurements</code>, <code>experiment planning</code></p><h1 id="5e4042f8-18d8-4c17-944b-1233cd68b4d9" class="">📚 Education and courses</h1><h3 id="d666147b-977a-4937-a54e-2fe088f4fd5b" class="">👨‍🎓 University</h3><p id="986287b8-7f4d-44dc-bb54-85731c01c366" class=""><strong>Saint-Petersburg State Electrotechnical University “LETI” </strong>(2008-2014)
+<a href="https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/nanotehnologii-i-mikrosistemnaya-tehnika">Nanotechnology and microsystem technics</a> department
+<a href="https://spbroma.github.io/docs/Bachelor.jpg"><strong>Bachelor </strong></a><strong>and </strong><a href="https://spbroma.github.io/docs/Master.jpg"><strong>Master </strong></a><strong>of Electronics and Nanoelectronics</strong></p><ul id="65c15819-d9ac-490c-8ea5-1735cefc25dc" class="toggle"><li><details open=""><summary>Achievements</summary><ul id="59bdb9dc-6412-4b4e-a86b-311422aaf92c" class="bulleted-list"><li><a href="https://spbroma.github.io/docs/Master_diploma.jpg">The second place diploma</a> in the competition of master’s dissertation of SPb ETU students of 2013/2014 with work “<a href="https://spbroma.github.io/docs/Vlasov_master_thesis.pdf">Multiwavelength method of processing signal from interferometric fiber optics sensors</a>”</li></ul><ul id="7411a4a3-2007-44ef-a3ee-3fd3d5ed50a5" class="bulleted-list"><li>Report at conference &quot;<a href="http://www.akinfo.ru/2016_01/2016_01s_004.htm">Applied Optics-2014</a>&quot;</li></ul><ul id="a80043cd-35e4-4d81-9fce-ceedcf6dfd95" class="bulleted-list"><li>Report at military-scientific conference in 2014</li></ul></details></li></ul><h3 id="833ee03b-c79d-4ca3-a87a-78f27bf6e144" class="">✍ Courses</h3><p id="86ec263b-3c94-4598-be36-95275809ad89" class=""><a href="https://www.notion.so/81f3b0278ae49cf694847d49055bcf99">Introduction to Machine learning</a> (Coursera, 2018)</p><p id="f829ed8c-2aad-47cd-b3d8-2abe92dc4cfa" class=""><a href="https://www.notion.so/a769d7a036aa5d4a3faf97bc1e452dcc">Introduction to Deep Learning</a> (Coursera, 2020)</p><p id="3581b459-3e7b-431a-bc6b-f36d49ede8b7" class=""><a href="https://www.notion.so/feec596c22c24403fd6c3b25c03840b3">Bayesian Methods for Machine Learning</a> (Coursera, 2021)</p><h1 id="311c44df-f592-43bc-9577-edf2f89b167d" class="">🐶 Pet projects</h1><h3 id="4cd009cb-a8be-4546-84c2-702d7366d388" class=""><a href="https://gitlab.com/spbroma/dsplot/">DSPlot</a> (2021)</h3><p id="fc19c95b-abce-4059-9a03-d3a4723200b3" class="">Python wrapper around Matplotlib and Plotly with unified interface for interactive plotting with rich opportunities. Initially, for complex-valued data with time-series, PSD and other plots.</p><ul id="c03b9aef-2e4b-4014-83f4-e81967fbb52f" class="toggle"><li><details open=""><summary>Preview</summary><figure id="6671ea1d-4e8b-49a2-a645-74a568844224" class="image"><a href="https://gitlab.com/spbroma/dsplot/-/raw/master/doc/dsplot_demo_3.gif"><img style="width:528px" src="https://gitlab.com/spbroma/dsplot/-/raw/master/doc/dsplot_demo_3.gif"/></a></figure></details></li></ul><h3 id="68c4c9e0-23b4-43bf-83ec-c4960c21bece" class=""><a href="https://gitlab.com/spbroma/grid-map-russia">Grid map of Russia</a> (2018)</h3><p id="99f4a472-2fbe-411f-9895-7a0c960b40ff" class="">Python interface for creating tile map visualization of Russia
+More details about the whole project: <a href="https://gizh.ru/all/russian-tilemap/">https://gizh.ru/all/russian-tilemap/</a></p><p id="6267805c-f54d-44e7-942f-7832c65d16f5" class=""><a href="https://spbroma.github.io/grid_map/plain/">Demo</a></p><h3 id="a229e2d6-df00-4994-93b4-55bb2644d2ae" class=""><a href="https://spbroma.github.io/yandex_router/">Yandex Router</a> (2017)</h3><p id="125e0d8a-ac13-465a-a3a3-0107f835b5d4" class="">After relocating to Moscow, I wanted to automate task of searching optimal area for rental flat in unknown city. First criteria was public transport availability from work. To estimate it, I wrote a script, which uses API of Yandex.Maps, calculates time to reach points from target and visualize it.</p><p id="e2dfb53e-b21a-40c9-a0ab-266074152f98" class="block-color-orange">For now page doesn&#x27;t work, because of limitations and terms of use API of Yandex.Maps.</p><ul id="cf5c0b2f-c46a-4350-80d2-7175c1caeeb1" class="toggle"><li><details open=""><summary>Screenshot</summary><figure id="c0ce509f-28fd-4348-957e-788c5907c26c" class="image"><a href="Roman%20Vlasov%20c0ce509f28fd4348957e788c5907c26c/Untitled.png"><img style="width:336px" src="Roman%20Vlasov%20c0ce509f28fd4348957e788c5907c26c/Untitled.png"/></a></figure></details></li></ul><h1 id="43fb5656-78bc-46c5-b915-8ee5edc20075" class="">💫 Other interests</h1><ul id="051c14be-823d-45b6-8866-7834d4a97dea" class="bulleted-list"><li>3D graphics</li></ul><ul id="eb575f88-06b8-4f45-84f0-f0b89926227d" class="bulleted-list"><li>Photography and graphic design</li></ul><ul id="c90b0ade-3780-4030-83d1-37e62b76b8e1" class="bulleted-list"><li>Music</li></ul><p id="4e88326b-cef1-4163-b8da-007ad5372e8c" class="">
+</p></div></article></body></html>
