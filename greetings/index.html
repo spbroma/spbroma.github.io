@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hi neighbours!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .lang-switcher select {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    h2 {
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+      font-size: 1.1rem;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 0.4em 0;
+    }
+
+    ul {
+      margin: 0.3em 0 0.8em;
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin: 0.2em 0;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .photo-strip {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0 24px;
+      flex-wrap: wrap;
+    }
+
+    .photo-slot {
+      flex: 1 1 240px;
+      max-width: calc(50% - 6px);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .photo-slot img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .contacts {
+      margin-top: 1em;
+      padding: 0.8em 1em;
+      border-radius: 8px;
+      background: #f0f4ff;
+      font-size: 0.95rem;
+    }
+
+    .contacts a {
+      color: #1a6ad9;
+      text-decoration: none;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 1em;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .lang-block {
+      display: none;
+    }
+
+    .lang-block.active {
+      display: block;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.6em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Hi neighbours!</h1>
+      <div class="lang-switcher">
+        <span>Язык / Language / Sprache:</span>
+        <select id="languageSwitcher">
+          <option value="ru">Русский</option>
+          <option value="en" selected>English</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="photo-strip">
+      <div class="photo-slot">
+        <img src="images/photo1.jpg"/>
+      </div>
+      <div class="photo-slot">
+        <img src="images/photo2.jpg"/>
+      </div>
+    </div>
+
+    <!-- RUSSIAN -->
+    <section class="lang-block lang-ru">
+      <p>Меня зовут Роман, и я совсем недавно переехал в этот дом в Мюнхене.</p>
+      <p>Мне очень хочется познакомиться с людьми, которые живут рядом. Верю, что тёплое и естественное общение между соседями делает место более уютным и живым.</p>
+
+      <h2>Немного обо мне</h2>
+      <ul>
+        <li>Занимаюсь IT и машинным обучением, работаю в компании, связанной с аудио и автомобилями.</li>
+        <li>Люблю исследовать город, гулять в горах, открывать новые красивые места.</li>
+        <li>Нравятся музыка, кино, хорошие разговоры и всё, что связано с творчеством и технологиями. Немного играю на барабанах, гитаре, укулеле и других музыкальных инструментах. Учусь рисунку с натуры. Когда-то всерьёз занимался фотографией и графическим дизайном, сейчас фото- и видеосъёмка остаются фоновым увлечением.</li>
+      </ul>
+
+      <h2>Зачем я сделал эту страницу</h2>
+      <p>Хочу завести в Мюнхене знакомых среди соседей — людей, с которыми приятно и легко общаться:</p>
+      <ul>
+        <li>иногда выпить кофе или пива во дворе или в ближайшем кафе;</li>
+        <li>сходить на прогулку или в парк;</li>
+        <li>обменяться опытом жизни в Мюнхене (врачи, магазины, интересные места, бюрократия и всё такое);</li>
+        <li>попрактиковать языки (я русский нейтив, средне знаю английский и собираюсь учить немецкий);</li>
+        <li>просто поздороваться, знать друг друга в лицо и помочь друг другу в экстренной ситуации.</li>
+      </ul>
+
+      <p>Это <strong>не реклама</strong> и <strong>не попытка что-то продать</strong>. Мне важно спокойное, живое соседство — ощущение, что вокруг есть люди, с которыми можно по-человечески поговорить и поддерживать лёгкий контакт.</p>
+
+      <h2>Как можно отреагировать</h2>
+      <p>Если вам откликается такая идея, то можно отреагировать любым удобным способом:</p>
+      <ul>
+        <li>написать мне короткое сообщение;</li>
+        <li>предложить выпить кофе или сходить куда-то рядом;</li>
+        <li>просто сказать «привет», если увидите меня на улице :)</li>
+      </ul>
+
+      <p>Это ни к чему не обязывает: можно просто понаблюдать, можно один раз пересечься, можно вовсе не отвечать, если так комфортнее. Я за уважительные и спокойные границы и очень ценю личное пространство других людей.</p>
+
+      <div class="contacts">
+        <strong>Контакты:</strong><br />
+        Telegram:
+        <a href="https://t.me/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        Instagram:
+        <a href="https://instagram.com/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        WhatsApp:
+        <a href="https://wa.me/qr/JLY6WQOLRFALB1" target="_blank" rel="noopener">открыть чат</a>
+      </div>
+
+      <p class="footer-note">Спасибо, что дочитали до конца. Если хочется, давайте знакомиться :)</p>
+    </section>
+
+    <!-- ENGLISH -->
+    <section class="lang-block lang-en active">
+      <p class="disclaimer">
+        This text was translated from Russian using ChatGPT, so please forgive small imperfections.
+      </p>
+
+      <p>My name is Roman, and I’ve recently moved into this building here in Munich.</p>
+      <p>I’d really like to get to know the people who live nearby. I believe that warm, natural communication between neighbours makes a place feel much more cosy and alive.</p>
+
+      <h2>A bit about me</h2>
+      <ul>
+        <li>I work in IT and machine learning, in a company related to audio and cars.</li>
+        <li>I like exploring the city, hiking in the mountains and discovering new beautiful spots.</li>
+        <li>I enjoy music, films, good conversations and everything connected to creativity and technology. I play a bit of drums, guitar, ukulele and some other instruments. I’m learning life drawing. I used to do photography and graphic design more seriously; now photo and video are more of a quiet side hobby.</li>
+      </ul>
+
+      <h2>Why I made this page</h2>
+      <p>I’d like to make some local friends among my neighbours in Munich – people it’s easy and pleasant to talk to:</p>
+      <ul>
+        <li>meet for a coffee or a beer in the courtyard or at a nearby café;</li>
+        <li>go for a walk or to a park together;</li>
+        <li>exchange tips about life in Munich (doctors, shops, interesting places, bureaucracy and all that);</li>
+        <li>practise languages (I’m a native Russian speaker, speak English at an intermediate/upper level and I’m planning to learn German);</li>
+        <li>simply say hello, recognise each other and be able to help in an emergency.</li>
+      </ul>
+
+      <p>This is <strong>not advertising</strong> and <strong>I’m not trying to sell anything</strong>. I care about calm, friendly neighbourly contact – the feeling that there are people around you can talk to like a human being and stay lightly in touch with.</p>
+
+      <h2>How you can respond</h2>
+      <p>If this idea resonates with you, you can respond in any way that feels comfortable:</p>
+      <ul>
+        <li>send me a short message;</li>
+        <li>suggest meeting for a coffee or going somewhere nearby;</li>
+        <li>just say “hi” if you see me outside :)</li>
+      </ul>
+
+      <p>Nothing is obligatory: you can simply take a look, meet once and leave it at that, or not reply at all if that feels better for you. I really value respectful, calm boundaries and other people’s personal space.</p>
+
+      <div class="contacts">
+        <strong>Contact:</strong><br />
+        Telegram:
+        <a href="https://t.me/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        Instagram:
+        <a href="https://instagram.com/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        WhatsApp:
+        <a href="https://wa.me/qr/JLY6WQOLRFALB1" target="_blank" rel="noopener">open chat</a>
+      </div>
+
+      <p class="footer-note">Thanks for reading to the end. If you feel like it – let’s say hello and get to know each other.</p>
+    </section>
+
+    <!-- GERMAN -->
+    <section class="lang-block lang-de">
+      <p class="disclaimer">
+        Dieser Text wurde mit Hilfe von ChatGPT aus dem Russischen übersetzt. Kleine Ungenauigkeiten bitte entschuldigen.
+      </p>
+
+      <p>Mein Name ist Roman, und ich bin vor Kurzem in dieses Haus in München eingezogen.</p>
+      <p>Ich würde mich sehr freuen, die Menschen kennenzulernen, die hier in der Nähe wohnen. Ich glaube, dass warme und unkomplizierte Kommunikation zwischen Nachbarn einen Ort viel gemütlicher und lebendiger macht.</p>
+
+      <h2>Kurz über mich</h2>
+      <ul>
+        <li>Ich arbeite im IT-Bereich und im Machine Learning bei einer Firma, die mit Audio und Autos zu tun hat.</li>
+        <li>Ich erkunde gern die Stadt, gehe in die Berge und entdecke neue schöne Orte.</li>
+        <li>Ich mag Musik, Filme, gute Gespräche und alles, was mit Kreativität und Technologie zu tun hat. Ich spiele ein bisschen Schlagzeug, Gitarre, Ukulele und andere Instrumente. Ich lerne Zeichnen nach Modell. Früher habe ich mich ernsthafter mit Fotografie und Grafikdesign beschäftigt, heute ist Foto- und Videografie eher ein ruhiges Hobby im Hintergrund.</li>
+      </ul>
+
+      <h2>Warum ich diese Seite gemacht habe</h2>
+      <p>Ich möchte in München ein paar Kontakte unter meinen Nachbarn knüpfen – Menschen, mit denen man sich angenehm und leicht unterhalten kann:</p>
+      <ul>
+        <li>ab und zu einen Kaffee oder ein Bier im Hof oder in einem Café in der Nähe trinken;</li>
+        <li>gemeinsam spazieren gehen oder in den Park gehen;</li>
+        <li>Erfahrungen über das Leben in München austauschen (Ärzt:innen, Läden, interessante Orte, Bürokratie und so weiter);</li>
+        <li>Sprachen üben (meine Muttersprache ist Russisch, ich spreche ganz gut Englisch und möchte Deutsch lernen);</li>
+        <li>sich einfach grüßen, einander erkennen und im Notfall füreinander da sein.</li>
+      </ul>
+
+      <p>Das ist <strong>keine Werbung</strong> und <strong>kein Verkaufsangebot</strong>. Mir geht es um eine ruhige, lebendige Nachbarschaft – das Gefühl, dass es Menschen in der Nähe gibt, mit denen man sich auf Augenhöhe unterhalten und lockeren Kontakt halten kann.</p>
+
+      <h2>Wie Sie reagieren können</h2>
+      <p>Wenn Ihnen diese Idee sympathisch ist, können Sie auf jede für Sie passende Weise reagieren:</p>
+      <ul>
+        <li>mir eine kurze Nachricht schreiben;</li>
+        <li>vorschlagen, sich auf einen Kaffee zu treffen oder gemeinsam irgendwo in der Nähe hinzugehen;</li>
+        <li>einfach „Hallo“ sagen, wenn Sie mich draußen sehen :)</li>
+      </ul>
+
+      <p>Es verpflichtet zu nichts: Sie können einfach nur neugierig schauen, sich einmal treffen oder gar nicht antworten, wenn es sich so besser anfühlt. Ich schätze respektvolle, ruhige Grenzen und den persönlichen Raum anderer Menschen.</p>
+
+      <div class="contacts">
+        <strong>Kontakt:</strong><br />
+        Telegram:
+        <a href="https://t.me/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        Instagram:
+        <a href="https://instagram.com/spbroma" target="_blank" rel="noopener">@spbroma</a><br />
+        WhatsApp:
+        <a href="https://wa.me/qr/JLY6WQOLRFALB1" target="_blank" rel="noopener">Chat öffnen</a>
+      </div>
+
+      <p class="footer-note">Vielen Dank, dass Sie bis zum Ende gelesen haben. Wenn Sie möchten – sagen wir einfach Hallo und lernen uns ein bisschen kennen.</p>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const select = document.getElementById('languageSwitcher');
+      const blocks = document.querySelectorAll('.lang-block');
+      const title = document.querySelector('h1');
+
+      const titles = {
+        ru: 'Привет, соседи!',
+        en: 'Hi neighbours!',
+        de: 'Hallo, Nachbarinnen und Nachbarn!'
+      };
+
+      function setLanguage(lang) {
+        blocks.forEach(block => {
+          block.classList.remove('active');
+        });
+        const activeBlock = document.querySelector('.lang-' + lang);
+        if (activeBlock) {
+          activeBlock.classList.add('active');
+        }
+        if (titles[lang]) {
+          title.textContent = titles[lang];
+        }
+        document.documentElement.lang = lang;
+        select.value = lang;
+      }
+
+      select.addEventListener('change', function () {
+        setLanguage(this.value);
+      });
+
+      // initial: English by default
+      setLanguage('en');
+    })();
+  </script>
+</body>
+</html>
